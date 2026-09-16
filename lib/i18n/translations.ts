@@ -50,7 +50,7 @@ const en = {
   "about.p2":
     "We are a professional workforce and services company based in Yola, Adamawa State. We recruit, train, and certify technicians through the Atlas Steward Academy, then deploy them to homes and businesses that need reliable electrical, plumbing, solar, carpentry, and cleaning work done well.",
   "about.p3":
-    "We are early — currently focused on proving this model works in Yola before expanding further. We only launch services we've actually tested with real customers, and we only deploy technicians who've been through our vetting process.",
+    "We are early currently focused on proving this model works in Yola before expanding further. We only launch services we've actually tested with real customers, and we only deploy technicians who've been through our vetting process.",
   "about.promiseTitle": "Our promise",
   "about.promiseBody":
     "Every Atlas Steward is trained, assessed, and accountable for the work they do. If something isn't right, we make it right.",
