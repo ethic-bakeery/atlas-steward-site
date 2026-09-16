@@ -116,7 +116,7 @@ const en = {
   "terms.s4Body1":
     "If a completed job is found faulty due to your workmanship, you will return and correct it at no additional charge. Where Atlas reasonably determines that damage resulted from negligence or a safety-checklist failure, you may be held financially responsible for the reasonable cost of repair, following a fair review that includes your account of events.",
   "terms.s4Body2":
-    "Serious violations — theft, fraud, harassment, working impaired, or a safety violation causing harm result in immediate removal from the platform and may be referred to the relevant authorities.",
+    "Serious violations theft, fraud, harassment, working impaired, or a safety violation causing harm result in immediate removal from the platform and may be referred to the relevant authorities.",
   "terms.s5Title": "5. Payment",
   "terms.s5Body":
     "Payment terms (commission share and payout timing) are confirmed with you directly before your first job and set out in your individual technician agreement.",
