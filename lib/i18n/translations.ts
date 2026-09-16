@@ -183,7 +183,7 @@ const en = {
   "contact.message": "Message",
   "contact.submit": "Send message",
   "contact.submitting": "Sending…",
-  "contact.success": "Thank you — we've received your message and will get back to you soon.",
+  "contact.success": "Thank you we've received your message and will get back to you soon.",
   "contact.errGeneric": "Something went wrong sending your message. Please try again.",
 } as const;
 
@@ -239,7 +239,7 @@ const ha: Record<keyof typeof en, string> = {
     "Kowane Atlas Steward an horar da shi, an bincika shi, kuma yana da alhakin aikin da ya yi. Idan wani abu bai yi daidai ba, za mu gyara shi.",
   "about.futureTitle": "Inda muke tafiya",
   "about.futureBody":
-    "Ayyukan gida shi ne farkon tafiyarmu, ba iyakarmu ba. Atlas Steward Services shi ne farkon abin da muke shirin girma zuwa babban rukuni — ciki har da Atlas Steward Academy don horarwa da takardar shaida, sannan daga baya ayyukan kula da gine-gine da manyan kwangiloli — yayin da muke tabbatar da tsarin, birni bayan birni.",
+    "Ayyukan gida shi ne farkon tafiyarmu, ba iyakarmu ba. Atlas Steward Services shi ne farkon abin da muke shirin girma zuwa babban rukuni — ciki har da Atlas Steward Academy don horarwa da takardar shaida, sannan daga baya ayyukan kula da gine-gine da manyan kwangiloli yayin da muke tabbatar da tsarin, birni bayan birni.",
 
   // Academy
   "academy.kicker": "Makarantar Atlas Steward",
@@ -290,7 +290,7 @@ const ha: Record<keyof typeof en, string> = {
   "terms.s3Title": "3. Abin da kada ka yi",
   "terms.s3i1": "Karɓar kuɗi ko wani buƙata a wajen abin da Atlas ta tsara, ba tare da sanar da su ba.",
   "terms.s3i2": "Ba da aiki ga wani mutum daban ba tare da izinin da aka rubuta a gaba ba.",
-  "terms.s3i3": "Roƙon abokin cinikin Atlas ya yi maka aiki kai tsaye, a wajen Atlas — duba Sashe na 6.",
+  "terms.s3i3": "Roƙon abokin cinikin Atlas ya yi maka aiki kai tsaye, a wajen Atlas duba Sashe na 6.",
   "terms.s3i4": "Ƙarya game da ƙwarewarka, takardar shaidarka, ko gogewarka.",
   "terms.s3i5": "Yin aiki a cikin maye, ko nuna hali marar kyau ko wariya.",
   "terms.s3i6": "Lalata dukiyar abokin ciniki fiye da abin da aikin ya ƙunsa.",
