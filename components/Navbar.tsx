@@ -15,6 +15,7 @@ export function Navbar() {
     { href: "/academy", label: t("nav.academy") },
     { href: "/terms", label: t("nav.terms") },
     { href: "/contact", label: t("nav.contact") },
+    { href: "/services", label: t("nav.services") },
   ];
 
   return (
