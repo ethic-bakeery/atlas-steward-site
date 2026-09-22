@@ -13,6 +13,85 @@ const en = {
   "nav.join": "Join the Academy",
   "nav.admin": "Admin",
 
+  // Services
+    // Services page
+  "servicesPage.kicker": "Our Services",
+  "servicesPage.title": "Professional Home Services",
+  "servicesPage.brandLine": "Trained. Assessed. Accountable.",
+  "servicesPage.intro":
+    "Atlas Steward provides reliable home and business services through trained and accountable professionals. We are starting with cleaning, plumbing, and electrical services in Yola.",
+
+  "servicesPage.cleaningSummary":
+    "Professional cleaning for homes, offices, and other spaces, delivered by trained Stewards.",
+
+  "servicesPage.cleaningStep1Title": "Tell us what you need",
+  "servicesPage.cleaningStep1Detail":
+    "Share the type of space, cleaning required, and your preferred time.",
+
+  "servicesPage.cleaningStep2Title": "We confirm the job",
+  "servicesPage.cleaningStep2Detail":
+    "Our team reviews the request and confirms the service details with you.",
+
+  "servicesPage.cleaningStep3Title": "A Steward is assigned",
+  "servicesPage.cleaningStep3Detail":
+    "We assign a trained and assessed cleaner to handle the job.",
+
+  "servicesPage.cleaningStep4Title": "Job completed",
+  "servicesPage.cleaningStep4Detail":
+    "The Steward completes the work and reports the job back to Atlas.",
+
+  "servicesPage.plumbingSummary":
+    "Reliable plumbing support for common household and business plumbing problems.",
+
+  "servicesPage.plumbingStep1Title": "Tell us the problem",
+  "servicesPage.plumbingStep1Detail":
+    "Describe the plumbing issue and provide any useful details or photos.",
+
+  "servicesPage.plumbingStep2Title": "We assess the request",
+  "servicesPage.plumbingStep2Detail":
+    "Our team reviews the problem and confirms what is required.",
+
+  "servicesPage.plumbingStep3Title": "A Steward is assigned",
+  "servicesPage.plumbingStep3Detail":
+    "A trained and assessed plumbing professional is assigned to the job.",
+
+  "servicesPage.plumbingStep4Title": "Job completed",
+  "servicesPage.plumbingStep4Detail":
+    "The work is completed and the job is reported back to Atlas.",
+
+  "servicesPage.electricalSummary":
+    "Professional electrical services for homes and businesses, handled by trained Stewards.",
+
+  "servicesPage.electricalStep1Title": "Tell us the problem",
+  "servicesPage.electricalStep1Detail":
+    "Describe the electrical issue and provide any useful details or photos.",
+
+  "servicesPage.electricalStep2Title": "We assess the request",
+  "servicesPage.electricalStep2Detail":
+    "Our team reviews the request and determines what support is required.",
+
+  "servicesPage.electricalStep3Title": "A Steward is assigned",
+  "servicesPage.electricalStep3Detail":
+    "A trained and assessed electrical professional is assigned to the job.",
+
+  "servicesPage.electricalStep4Title": "Job completed",
+  "servicesPage.electricalStep4Detail":
+    "The work is completed and the job is reported back to Atlas.",
+
+  "servicesPage.stepLabel": "Step",
+  "servicesPage.ctaTitle": "Need a service?",
+  "servicesPage.ctaBody":
+    "Tell us what you need and our team will help you get the right Atlas Steward for the job.",
+  "servicesPage.whatsappButton": "Message us on WhatsApp",
+  "servicesPage.emailButton": "Send us an email",
+  "servicesPage.whatsappMessage":
+    "Hello Atlas Steward, I would like to request a service.",
+  "servicesPage.emailSubject": "Service Request",
+  "servicesPage.emailBody":
+    "Hello Atlas Steward,\n\nI would like to request a service.\n\nService needed:\nLocation:\nPreferred date/time:\nAdditional details:\n",
+  "servicesPage.browseFirst": "Want to know more about us?",
+  "servicesPage.learnMoreLink": "Learn more about Atlas Steward",
+
   // Home
   "home.heroTitle": "Built to Serve. Trained to Care.",
   "home.heroSubtitle":
@@ -226,6 +305,83 @@ const ha: Record<keyof typeof en, string> = {
   "service.cleaning": "Tsaftacewa",
   "service.welding": "Walda",
 
+    // Services page
+  "servicesPage.kicker": "Ayyukanmu",
+  "servicesPage.title": "Ƙwararrun Ayyukan Gida",
+  "servicesPage.brandLine": "An Horar. An Bincika. Ana da Alhaki.",
+  "servicesPage.intro":
+    "Atlas Steward yana samar da amintattun ayyukan gida da kasuwanci ta hanyar ƙwararrun ma'aikata da aka horar kuma aka bincika. Muna farawa da tsaftacewa, famfo, da wutar lantarki a Yola.",
+
+  "servicesPage.cleaningSummary":
+    "Ƙwararrun ayyukan tsaftacewa ga gidaje, ofisoshi, da sauran wurare ta hannun Stewards da aka horar.",
+
+  "servicesPage.cleaningStep1Title": "Faɗa mana abin da kake bukata",
+  "servicesPage.cleaningStep1Detail":
+    "Faɗa mana irin wurin, nau'in tsaftacewar da ake bukata, da lokacin da ya dace da kai.",
+
+  "servicesPage.cleaningStep2Title": "Mun tabbatar da aikin",
+  "servicesPage.cleaningStep2Detail":
+    "Ƙungiyarmu za ta duba buƙatar kuma ta tabbatar da bayanan aikin tare da kai.",
+
+  "servicesPage.cleaningStep3Title": "An tura Steward",
+  "servicesPage.cleaningStep3Detail":
+    "Za mu tura mai tsaftacewa da aka horar kuma aka bincika domin yin aikin.",
+
+  "servicesPage.cleaningStep4Title": "An kammala aiki",
+  "servicesPage.cleaningStep4Detail":
+    "Steward zai kammala aikin kuma ya kai rahoton aikin ga Atlas.",
+
+  "servicesPage.plumbingSummary":
+    "Amintaccen taimakon famfo ga matsalolin famfo na gidaje da kasuwanci.",
+
+  "servicesPage.plumbingStep1Title": "Faɗa mana matsalar",
+  "servicesPage.plumbingStep1Detail":
+    "Bayyana matsalar famfo kuma ka ba da wasu bayanai ko hotuna idan akwai.",
+
+  "servicesPage.plumbingStep2Title": "Mun duba buƙatar",
+  "servicesPage.plumbingStep2Detail":
+    "Ƙungiyarmu za ta duba matsalar kuma ta tabbatar da abin da ake bukata.",
+
+  "servicesPage.plumbingStep3Title": "An tura Steward",
+  "servicesPage.plumbingStep3Detail":
+    "Za a tura ƙwararren mai aikin famfo da aka horar kuma aka bincika.",
+
+  "servicesPage.plumbingStep4Title": "An kammala aiki",
+  "servicesPage.plumbingStep4Detail":
+    "Za a kammala aikin kuma a kai rahotonsa ga Atlas.",
+
+  "servicesPage.electricalSummary":
+    "Ƙwararrun ayyukan wutar lantarki ga gidaje da kasuwanci ta hannun Stewards da aka horar.",
+
+  "servicesPage.electricalStep1Title": "Faɗa mana matsalar",
+  "servicesPage.electricalStep1Detail":
+    "Bayyana matsalar wutar lantarki kuma ka ba da wasu bayanai ko hotuna idan akwai.",
+
+  "servicesPage.electricalStep2Title": "Mun duba buƙatar",
+  "servicesPage.electricalStep2Detail":
+    "Ƙungiyarmu za ta duba buƙatar kuma ta tantance irin taimakon da ake bukata.",
+
+  "servicesPage.electricalStep3Title": "An tura Steward",
+  "servicesPage.electricalStep3Detail":
+    "Za a tura ƙwararren mai aikin wutar lantarki da aka horar kuma aka bincika.",
+
+  "servicesPage.electricalStep4Title": "An kammala aiki",
+  "servicesPage.electricalStep4Detail":
+    "Za a kammala aikin kuma a kai rahotonsa ga Atlas.",
+
+  "servicesPage.stepLabel": "Mataki",
+  "servicesPage.ctaTitle": "Kana bukatar sabis?",
+  "servicesPage.ctaBody":
+    "Faɗa mana abin da kake bukata kuma ƙungiyarmu za ta taimaka maka samun Atlas Steward da ya dace da aikin.",
+  "servicesPage.whatsappButton": "Tura mana saƙo a WhatsApp",
+  "servicesPage.emailButton": "Aiko mana da imel",
+  "servicesPage.whatsappMessage":
+    "Sannu Atlas Steward, ina son neman sabis.",
+  "servicesPage.emailSubject": "Buƙatar Sabis",
+  "servicesPage.emailBody":
+    "Sannu Atlas Steward,\n\nIna son neman sabis.\n\nSabis da ake bukata:\nWuri:\nRana/lokacin da ya dace:\nƘarin bayani:\n",
+  "servicesPage.browseFirst": "Kana son sanin ƙarin bayani game da mu?",
+  "servicesPage.learnMoreLink": "Koyi game da Atlas Steward",
   // About
   "about.kicker": "Game da Mu",
   "about.p1":
