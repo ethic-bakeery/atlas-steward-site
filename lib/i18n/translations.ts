@@ -10,7 +10,6 @@ const en = {
   "nav.academy": "Academy",
   "nav.terms": "Terms",
   "nav.contact": "Contact",
-  "nav.services": "Ayyuka",
   "nav.services": "Services",
   "nav.join": "Join the Academy",
   "nav.admin": "Admin",
@@ -274,6 +273,7 @@ const ha: Record<keyof typeof en, string> = {
   "nav.academy": "Makarantar Sana'a",
   "nav.terms": "Ka'idoji",
   "nav.contact": "Tuntuɓe Mu",
+  "nav.services": "Ayyuka",
   "nav.join": "Shiga Makarantar Sana'a",
   "nav.admin": "Admin",
 
