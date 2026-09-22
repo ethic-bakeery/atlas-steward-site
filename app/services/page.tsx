@@ -11,7 +11,10 @@ type ServiceDef = {
   key: "cleaning" | "plumbing" | "electrical";
   nameKey: TranslationKey;
   summaryKey: TranslationKey;
-  steps: { titleKey: TranslationKey; detailKey: TranslationKey }[];
+  steps: {
+    titleKey: TranslationKey;
+    detailKey: TranslationKey;
+  }[];
 };
 
 const services: ServiceDef[] = [
