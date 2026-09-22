@@ -17,6 +17,7 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           <Link href="/about" className="hover:text-navy">{t("nav.about")}</Link>
+          <Link href="/services">{t("nav.services")}</Link>
           <Link href="/academy" className="hover:text-navy">{t("nav.academy")}</Link>
           <Link href="/terms" className="hover:text-navy">{t("nav.terms")}</Link>
           <Link href="/contact" className="hover:text-navy">{t("nav.contact")}</Link>
