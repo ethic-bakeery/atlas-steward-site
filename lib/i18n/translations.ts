@@ -10,6 +10,8 @@ const en = {
   "nav.academy": "Academy",
   "nav.terms": "Terms",
   "nav.contact": "Contact",
+  "nav.services": "Ayyuka",
+  "nav.services": "Services",
   "nav.join": "Join the Academy",
   "nav.admin": "Admin",
 
