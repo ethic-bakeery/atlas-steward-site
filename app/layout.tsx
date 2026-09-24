@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
   description:
-    "Atlas Steward trains, employs, and deploys professional technicians for electrical, plumbing, solar, and home service work in Yola, Adamawa State.",
+    "Astel trains, employs, and deploys professional technicians for electrical, plumbing, solar, and home service work in Yola, Adamawa State.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
