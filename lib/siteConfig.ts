@@ -3,22 +3,19 @@
 // only file that needs to change for the copy (colors live in tailwind.config.ts).
 
 export const siteConfig = {
-  name: "Atlas Steward",
-  shortName: "Atlas Steward",
+  name: "Astel",
+  shortName: "Astel",
   tagline: "Built to Serve. Trained to Care.",
   domain: "atlassteward.com",
-  supportEmail: "hello@atlassteward.com",
+  supportEmail: "hello@astel.ng",
   // TODO: replace with your real numbers before deploying.
-  contactPhone: "+234 000 000 0000",
-  contactWhatsApp: "+234 000 000 0000",
+  contactPhone: "+234 903 032 7468",
+  contactWhatsApp: "+234 903 032 7468",
   location: "Yola, Adamawa State, Nigeria",
   services: [
     { key: "electrical", label: "Electrical" },
     { key: "plumbing", label: "Plumbing" },
-    { key: "solar", label: "Solar & Inverter" },
-    { key: "carpentry", label: "Carpentry" },
     { key: "cleaning", label: "Cleaning" },
-    { key: "welding", label: "Welding" },
   ],
 } as const;
 
