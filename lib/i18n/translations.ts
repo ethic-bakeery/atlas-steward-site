@@ -11,7 +11,7 @@ const en = {
   "nav.terms": "Terms",
   "nav.contact": "Contact",
   "nav.services": "Services",
-  "nav.join": "Join the Academy",
+  "nav.join": "Become a Partner",
   "nav.admin": "Admin",
 
   // Services
