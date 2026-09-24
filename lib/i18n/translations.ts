@@ -113,7 +113,7 @@ const en = {
     "If a job isn't done right, we make it right that's a standard we build systems around, not a slogan.",
   "home.becomeTitle": "Want to become a Steward?",
   "home.becomeSubtitle":
-    "If you're a skilled electrician, plumber, solar technician, carpenter, or cleaner in the Yola area, we'd like to hear from you.",
+    "If you're a skilled electrician, plumber, or cleaner in the Yola area, we'd like to hear from you.",
   "home.becomeCta": "Apply now",
 
   "service.electrical": "Electrical",
