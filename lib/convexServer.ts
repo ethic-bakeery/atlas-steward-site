@@ -40,3 +40,22 @@ export async function listContactMessages() {
 export async function markContactMessageRead(id: Id<"contactMessages">) {
   return fetchMutation(api.contact.markRead, { id, adminSecret: adminSecret() });
 }
+
+export async function listAcademyApplications() {
+  return fetchQuery(api.academyApplications.list, { adminSecret: adminSecret() });
+}
+
+export async function getAcademyApplication(id: Id<"academyApplications">) {
+  return fetchQuery(api.academyApplications.getById, { id, adminSecret: adminSecret() });
+}
+
+export async function updateAcademyApplicationStatus(
+  id: Id<"academyApplications">,
+  status: "pending" | "approved" | "rejected"
+) {
+  return fetchMutation(api.academyApplications.updateStatus, {
+    id,
+    status,
+    adminSecret: adminSecret(),
+  });
+}

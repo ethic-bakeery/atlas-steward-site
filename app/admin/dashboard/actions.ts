@@ -25,3 +25,12 @@ export async function logout() {
   cookies().set(SESSION_COOKIE_NAME, "", { path: "/", maxAge: 0 });
   redirect("/admin/login");
 }
+
+export async function setAcademyApplicationStatus(
+  id: Id<"academyApplications">,
+  status: "pending" | "approved" | "rejected"
+) {
+  await updateAcademyApplicationStatus(id, status);
+  revalidatePath("/admin/dashboard/academy-applications");
+  revalidatePath(`/admin/dashboard/academy-applications/${id}`);
+}

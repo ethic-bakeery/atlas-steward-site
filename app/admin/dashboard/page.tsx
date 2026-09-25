@@ -20,6 +20,9 @@ export default async function AdminDashboardPage() {
           <h1 className="text-2xl font-bold text-navy">Technician applications</h1>
         </div>
         <div className="flex items-center gap-3">
+          <Link href="/admin/dashboard/academy-applications" className="btn-secondary">
+  Academy Applications
+</Link>
           <Link href="/admin/dashboard/messages" className="btn-secondary">Messages</Link>
           <form action={logout}>
             <button type="submit" className="btn-secondary">Sign out</button>

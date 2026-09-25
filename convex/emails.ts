@@ -111,3 +111,53 @@ export const sendContactNotification = internalAction({
     }
   },
 });
+// Notifies the admin inbox when someone submits the Academy application.
+// No applicant confirmation email here — that form doesn't collect an email
+// address, only a phone number, so there's nothing to send one to.
+export const sendAcademyApplicationNotification = internalAction({
+  args: {
+    fullName: v.string(),
+    phone: v.string(),
+    tradePreference: v.union(v.literal("electrical"), v.literal("plumbing"), v.literal("cleaning")),
+  },
+  handler: async (_ctx, args) => {
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.RESEND_FROM_EMAIL;
+    const to = process.env.ADMIN_NOTIFICATION_EMAIL || process.env.ADMIN_EMAIL;
+
+    if (!apiKey || !from || !to) {
+      console.warn(
+        "RESEND_API_KEY, RESEND_FROM_EMAIL, or an admin recipient email is not set — skipping Academy application notification email."
+      );
+      return;
+    }
+
+    const safeName = escapeHtml(args.fullName);
+    const safePhone = escapeHtml(args.phone);
+    const safeTrade = escapeHtml(args.tradePreference);
+
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from,
+        to,
+        subject: `New Academy application from ${safeName}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; color: #1f2430; max-width: 480px; margin: 0 auto;">
+            <h2 style="color: #1B2A4A;">New Academy application</h2>
+            <p><strong>Name:</strong> ${safeName}</p>
+            <p><strong>Phone:</strong> ${safePhone}</p>
+            <p><strong>Trade preference:</strong> ${safeTrade}</p>
+            <p style="margin-top: 24px;">View the full application in the admin dashboard under "Academy Applications".</p>
+          </div>
+        `,
+      }),
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("Resend email failed:", response.status, text);
+    }
+  },
+});
