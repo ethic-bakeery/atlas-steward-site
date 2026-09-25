@@ -90,7 +90,7 @@ export default function AcademyApplyPage() {
         <div className="card max-w-md">
           <h1 className="text-2xl font-bold text-navy">Application received</h1>
           <p className="mt-3 text-ink/70">
-            Thank you for applying to the Atlas Steward Academy. Our team will
+            Thank you for applying to the Astel Academy. Our team will
             review your application and reach out to you by phone with next
             steps.
           </p>
@@ -105,7 +105,7 @@ export default function AcademyApplyPage() {
         Academy Application
       </p>
       <h1 className="mt-2 text-3xl font-bold text-navy sm:text-4xl">
-        Apply to the Atlas Steward Academy
+        Apply to the Astel Academy
       </h1>
       <p className="mt-4 max-w-xl text-ink/70">
         This first application is short on purpose. If it looks like a good
