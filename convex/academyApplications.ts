@@ -4,13 +4,15 @@ import { internal } from "./_generated/api";
 
 function assertAdmin(adminSecret: string) {
   const expected = process.env.ADMIN_API_SECRET;
+
   if (!expected || adminSecret !== expected) {
     throw new Error("Unauthorized.");
   }
 }
 
-// Public: the first-touch Academy application. Validated server-side too —
-// never trust that the browser's own form validation was actually enforced.
+// Public: the first-touch Academy application.
+// Validated server-side too — never trust that the browser's own
+// form validation was actually enforced.
 export const submit = mutation({
   args: {
     fullName: v.string(),
@@ -43,6 +45,7 @@ export const submit = mutation({
     ),
     experienceExplanation: v.optional(v.string()),
   },
+
   handler: async (ctx, args) => {
     const fullName = args.fullName.trim();
     const phone = args.phone.trim();
@@ -50,16 +53,37 @@ export const submit = mutation({
     const emergencyContact = args.emergencyContact.trim();
     const motivation = args.motivation.trim();
 
-    if (!fullName || !phone || !location || !emergencyContact || !motivation) {
+    if (
+      !fullName ||
+      !phone ||
+      !location ||
+      !emergencyContact ||
+      !motivation
+    ) {
       throw new Error("Please fill in all required fields.");
     }
-    if (!Number.isInteger(args.age) || args.age < 16 || args.age > 100) {
+
+    if (
+      !Number.isInteger(args.age) ||
+      args.age < 16 ||
+      args.age > 100
+    ) {
       throw new Error("Age must be a number between 16 and 100.");
     }
-    if (args.hasConflictingCommitment && !args.conflictingCommitmentExplanation?.trim()) {
-      throw new Error("Please briefly explain the conflicting commitment you mentioned.");
+
+    if (
+      args.hasConflictingCommitment &&
+      !args.conflictingCommitmentExplanation?.trim()
+    ) {
+      throw new Error(
+        "Please briefly explain the conflicting commitment you mentioned."
+      );
     }
-    if (args.experienceLevel !== "none" && !args.experienceExplanation?.trim()) {
+
+    if (
+      args.experienceLevel !== "none" &&
+      !args.experienceExplanation?.trim()
+    ) {
       throw new Error("Please briefly describe your experience.");
     }
 
@@ -74,20 +98,25 @@ export const submit = mutation({
       motivation,
       canAttendConsistently: args.canAttendConsistently,
       hasConflictingCommitment: args.hasConflictingCommitment,
-      conflictingCommitmentExplanation: args.conflictingCommitmentExplanation?.trim(),
+      conflictingCommitmentExplanation:
+        args.conflictingCommitmentExplanation?.trim(),
       experienceLevel: args.experienceLevel,
       experienceExplanation: args.experienceExplanation?.trim(),
       status: "pending",
       submittedAt: Date.now(),
     });
 
-    // No email was collected on this form, so we can only notify the admin
-    // inbox — there's nothing to send an applicant confirmation to.
-    await ctx.scheduler.runAfter(0, internal.emails.sendAcademyApplicationNotification, {
-      fullName,
-      phone,
-      tradePreference: args.tradePreference,
-    });
+    // No email was collected on this form, so we can only notify
+    // the admin inbox.
+    await ctx.scheduler.runAfter(
+      0,
+      internal.emails.sendAcademyApplicationNotification,
+      {
+        fullName,
+        phone,
+        tradePreference: args.tradePreference,
+      }
+    );
 
     return { id };
   },
@@ -95,9 +124,13 @@ export const submit = mutation({
 
 // Admin: list every application, most recent first.
 export const list = query({
-  args: { adminSecret: v.string() },
+  args: {
+    adminSecret: v.string(),
+  },
+
   handler: async (ctx, args) => {
     assertAdmin(args.adminSecret);
+
     return await ctx.db
       .query("academyApplications")
       .withIndex("by_submittedAt")
@@ -108,9 +141,14 @@ export const list = query({
 
 // Admin: full detail for a single application.
 export const getById = query({
-  args: { id: v.id("academyApplications"), adminSecret: v.string() },
+  args: {
+    id: v.id("academyApplications"),
+    adminSecret: v.string(),
+  },
+
   handler: async (ctx, args) => {
     assertAdmin(args.adminSecret);
+
     return await ctx.db.get(args.id);
   },
 });
@@ -119,11 +157,19 @@ export const getById = query({
 export const updateStatus = mutation({
   args: {
     id: v.id("academyApplications"),
-    status: v.union(v.literal("pending"), v.literal("approved"), v.literal("rejected")),
+    status: v.union(
+      v.literal("pending"),
+      v.literal("approved"),
+      v.literal("rejected")
+    ),
     adminSecret: v.string(),
   },
+
   handler: async (ctx, args) => {
     assertAdmin(args.adminSecret);
-    await ctx.db.patch(args.id, { status: args.status });
+
+    await ctx.db.patch(args.id, {
+      status: args.status,
+    });
   },
 });
