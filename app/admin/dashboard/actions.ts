@@ -4,7 +4,11 @@ import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Id } from "@/convex/_generated/dataModel";
-import { updateTechnicianStatus, markContactMessageRead } from "@/lib/convexServer";
+import {
+  updateTechnicianStatus,
+  markContactMessageRead,
+  updateAcademyApplicationStatus,
+} from "@/lib/convexServer";
 import { SESSION_COOKIE_NAME } from "@/lib/session";
 
 export async function setStatus(
