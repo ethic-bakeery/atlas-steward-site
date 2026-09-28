@@ -20,7 +20,7 @@ const en = {
   "servicesPage.title": "Professional Home Services",
   "servicesPage.brandLine": "Trained. Assessed. Accountable.",
   "servicesPage.intro":
-    "Atlas Steward provides reliable home and business services through trained and accountable professionals. We are starting with cleaning, plumbing, and electrical services in Yola.",
+    "Astel provides reliable home and business services through trained and accountable professionals. We are starting with cleaning, plumbing, and electrical services in Yola.",
 
   "servicesPage.cleaningSummary":
     "Professional cleaning for homes, offices, and other spaces, delivered by trained Stewards.",
@@ -82,21 +82,21 @@ const en = {
   "servicesPage.stepLabel": "Step",
   "servicesPage.ctaTitle": "Need a service?",
   "servicesPage.ctaBody":
-    "Tell us what you need and our team will help you get the right Atlas Steward for the job.",
+    "Tell us what you need and our team will help you get the right Astel for the job.",
   "servicesPage.whatsappButton": "Message us on WhatsApp",
   "servicesPage.emailButton": "Send us an email",
   "servicesPage.whatsappMessage":
-    "Hello Atlas Steward, I would like to request a service.",
+    "Hello Astel, I would like to request a service.",
   "servicesPage.emailSubject": "Service Request",
   "servicesPage.emailBody":
-    "Hello Atlas Steward,\n\nI would like to request a service.\n\nService needed:\nLocation:\nPreferred date/time:\nAdditional details:\n",
+    "Hello Astel,\n\nI would like to request a service.\n\nService needed:\nLocation:\nPreferred date/time:\nAdditional details:\n",
   "servicesPage.browseFirst": "Want to know more about us?",
-  "servicesPage.learnMoreLink": "Learn more about Atlas Steward",
+  "servicesPage.learnMoreLink": "Learn more about Astel",
 
   // Home
   "home.heroTitle": "Built to Serve. Trained to Care.",
   "home.heroSubtitle":
-    "Atlas Steward trains, employs, and deploys professional technicians to take care of the electrical, plumbing, and solar problems in your home or business with someone accountable behind every job.",
+    "Astel trains, employs, and deploys professional technicians to take care of the electrical, plumbing, and solar problems in your home or business with someone accountable behind every job.",
   "home.ctaApply": "Apply to the Academy",
   "home.ctaLearn": "Learn how it works",
   "home.servicesTitle": "What we cover",
@@ -104,10 +104,10 @@ const en = {
     "We only launch a service once it has been tested and validated this list reflects what we're currently building in Yola.",
   "home.step1Title": "Trained",
   "home.step1Body":
-    "Every Atlas Steward goes through the Academy's foundation and technical training before being deployed.",
+    "Every Astel goes through the Academy's foundation and technical training before being deployed.",
   "home.step2Title": "Assessed",
   "home.step2Body":
-    "We check references and real work history before anyone represents Atlas Steward on a job.",
+    "We check references and real work history before anyone represents Astel on a job.",
   "home.step3Title": "Accountable",
   "home.step3Body":
     "If a job isn't done right, we make it right that's a standard we build systems around, not a slogan.",
@@ -126,23 +126,23 @@ const en = {
   // About
   "about.kicker": "About",
   "about.p1":
-    "Stewardship means taking responsibility for something and taking care of it properly. That's the standard Atlas Steward is built around not just connecting you with an artisan, but sending a trained professional who is accountable for the work.",
+    "Stewardship means taking responsibility for something and taking care of it properly. That's the standard Astel is built around not just connecting you with an artisan, but sending a trained professional who is accountable for the work.",
   "about.p2":
-    "We are a professional workforce and services company based in Yola, Adamawa State. We recruit, train, and certify technicians through the Atlas Steward Academy, then deploy them to homes and businesses that need reliable electrical, plumbing, solar, carpentry, and cleaning work done well.",
+    "We are a professional workforce and services company based in Yola, Adamawa State. We recruit, train, and certify technicians through the Astel Academy, then deploy them to homes and businesses that need reliable electrical, plumbing, solar, carpentry, and cleaning work done well.",
   "about.p3":
     "We are early currently focused on proving this model works in Yola before expanding further. We only launch services we've actually tested with real customers, and we only deploy technicians who've been through our vetting process.",
   "about.promiseTitle": "Our promise",
   "about.promiseBody":
-    "Every Atlas Steward is trained, assessed, and accountable for the work they do. If something isn't right, we make it right.",
+    "Every Astel is trained, assessed, and accountable for the work they do. If something isn't right, we make it right.",
   "about.futureTitle": "Where we're headed",
   "about.futureBody":
-    "Home services are our starting point, not our ceiling. Atlas Steward Services is the first of what we intend to build into a wider group including Atlas Steward Academy for training and certification, and eventually facilities and enterprise-scale maintenance work as we prove the model, one city at a time.",
+    "Home services are our starting point, not our ceiling. Astel Services is the first of what we intend to build into a wider group including Astel Academy for training and certification, and eventually facilities and enterprise-scale maintenance work as we prove the model, one city at a time.",
 
   // Academy
-  "academy.kicker": "Atlas Steward Academy",
+  "academy.kicker": "Astel Academy",
   "academy.title": "We build the people who serve.",
   "academy.subtitle":
-    "The Academy is how skilled tradespeople become Atlas Stewards trained, assessed, and trusted to represent us on every job.",
+    "The Academy is how skilled tradespeople become Astel trained, assessed, and trusted to represent us on every job.",
   "academy.pipelineTitle": "How the pipeline works",
   "academy.step1Title": "Recruit",
   "academy.step1Body": "You apply and tell us about your trade experience.",
@@ -151,7 +151,7 @@ const en = {
   "academy.step3Title": "Assess",
   "academy.step3Body": "We evaluate real, demonstrated competence not just claims.",
   "academy.step4Title": "Certify",
-  "academy.step4Body": "You become eligible for deployment as an Atlas Steward.",
+  "academy.step4Body": "You become eligible for deployment as an Astel.",
   "academy.step5Title": "Deploy",
   "academy.step5Body": "You receive real jobs through Atlas dispatch.",
   "academy.step6Title": "Grow",
@@ -177,7 +177,7 @@ const en = {
     "This is a working draft, written in plain language so every applicant can read and understand it before agreeing. It has not yet been reviewed by a lawyer treat it as a statement of intent, not a final legal contract, until it has been.",
   "terms.s1Title": "1. Who this applies to",
   "terms.s1Body":
-    "Anyone applying to join the Atlas Steward Academy or to work as an Atlas Steward technician, regardless of trade category.",
+    "Anyone applying to join the Astel Academy or to work as an Astel technician, regardless of trade category.",
   "terms.s2Title": "2. What we expect from you",
   "terms.s2i1": "Accept only jobs assigned or confirmed through Atlas dispatch.",
   "terms.s2i2": "Arrive within the agreed time window, or notify dispatch immediately if delayed.",
@@ -205,7 +205,7 @@ const en = {
     "Customer details shared with you are for completing the assigned job only. You agree not to solicit or accept work directly from a customer introduced through Atlas, outside of Atlas, for a period defined in your individual technician agreement.",
   "terms.s7Title": "7. Independent contractor status",
   "terms.s7Body":
-    "You are engaged as an independent contractor/partner, not an employee of Atlas Steward. You are responsible for your own applicable taxes and any required trade permits.",
+    "You are engaged as an independent contractor/partner, not an employee of Astel. You are responsible for your own applicable taxes and any required trade permits.",
   "terms.s8Title": "8. Your data",
   "terms.s8Body":
     "Information and the passport photo you submit are used to evaluate your application and, if approved, to create your technician profile. We do not sell your data to third parties.",
@@ -213,7 +213,7 @@ const en = {
 
   // Register
   "register.kicker": "Academy Application",
-  "register.title": "Apply to become an Atlas Steward",
+  "register.title": "Apply to become an Astel",
   "register.subtitle":
     "Fill in your details below. A clear passport photo is required this will be used for your technician profile if your application is approved.",
   "register.fullName": "Full name",
@@ -244,7 +244,7 @@ const en = {
   // Register success
   "registerSuccess.title": "Application received",
   "registerSuccess.body":
-    "Thank you for applying to the Atlas Steward Academy. We've sent a confirmation to your email, and our team will review your application and reference within a few days.",
+    "Thank you for applying to the Astel Academy. We've sent a confirmation to your email, and our team will review your application and reference within a few days.",
   "registerSuccess.backHome": "Back to home",
 
   // Contact
@@ -280,7 +280,7 @@ const ha: Record<keyof typeof en, string> = {
   // Home
   "home.heroTitle": "Gina domin Hidima. Horarwa domin Kulawa.",
   "home.heroSubtitle":
-    "Atlas Steward na horarwa, ɗaukar aiki, kuma tura ƙwararrun ma'aikata don gyara matsalolin wutar lantarki, famfo, da hasken rana a gidanku ko kasuwancinku tare da wanda zai amsa alhaki a kowane aiki.",
+    "Astel na horarwa, ɗaukar aiki, kuma tura ƙwararrun ma'aikata don gyara matsalolin wutar lantarki, famfo, da hasken rana a gidanku ko kasuwancinku tare da wanda zai amsa alhaki a kowane aiki.",
   "home.ctaApply": "Nemi Shiga Makarantar Sana'a",
   "home.ctaLearn": "Koyi yadda muke aiki",
   "home.servicesTitle": "Ayyukan da muke yi",
@@ -288,10 +288,10 @@ const ha: Record<keyof typeof en, string> = {
     "Muna fara wani sabis ne kawai bayan mun gwada shi kuma muka tabbatar jerin nan yana nuna abin da muke ginawa a yanzu a Yola.",
   "home.step1Title": "Horarru",
   "home.step1Body":
-    "Kowane Atlas Steward zai bi horon farko da horon sana'a na Makarantar kafin a tura shi aiki.",
+    "Kowane Astel zai bi horon farko da horon sana'a na Makarantar kafin a tura shi aiki.",
   "home.step2Title": "An Bincika",
   "home.step2Body":
-    "Muna duba shaidun mutane da tarihin aikinsu na gaskiya kafin kowa ya wakilci Atlas Steward a wani aiki.",
+    "Muna duba shaidun mutane da tarihin aikinsu na gaskiya kafin kowa ya wakilci Astel a wani aiki.",
   "home.step3Title": "Mai Alhaki",
   "home.step3Body":
     "Idan ba a yi aiki daidai ba, za mu gyara shi wannan ƙa'ida ce da muka gina tsari a kanta, ba kalma kawai ba.",
@@ -312,7 +312,7 @@ const ha: Record<keyof typeof en, string> = {
   "servicesPage.title": "Ƙwararrun Ayyukan Gida",
   "servicesPage.brandLine": "An Horar. An Bincika. Ana da Alhaki.",
   "servicesPage.intro":
-    "Atlas Steward yana samar da amintattun ayyukan gida da kasuwanci ta hanyar ƙwararrun ma'aikata da aka horar kuma aka bincika. Muna farawa da tsaftacewa, famfo, da wutar lantarki a Yola.",
+    "Astel yana samar da amintattun ayyukan gida da kasuwanci ta hanyar ƙwararrun ma'aikata da aka horar kuma aka bincika. Muna farawa da tsaftacewa, famfo, da wutar lantarki a Yola.",
 
   "servicesPage.cleaningSummary":
     "Ƙwararrun ayyukan tsaftacewa ga gidaje, ofisoshi, da sauran wurare ta hannun Stewards da aka horar.",
@@ -374,36 +374,36 @@ const ha: Record<keyof typeof en, string> = {
   "servicesPage.stepLabel": "Mataki",
   "servicesPage.ctaTitle": "Kana bukatar sabis?",
   "servicesPage.ctaBody":
-    "Faɗa mana abin da kake bukata kuma ƙungiyarmu za ta taimaka maka samun Atlas Steward da ya dace da aikin.",
+    "Faɗa mana abin da kake bukata kuma ƙungiyarmu za ta taimaka maka samun Astel da ya dace da aikin.",
   "servicesPage.whatsappButton": "Tura mana saƙo a WhatsApp",
   "servicesPage.emailButton": "Aiko mana da imel",
   "servicesPage.whatsappMessage":
-    "Sannu Atlas Steward, ina son neman sabis.",
+    "Sannu Astel, ina son neman sabis.",
   "servicesPage.emailSubject": "Buƙatar Sabis",
   "servicesPage.emailBody":
-    "Sannu Atlas Steward,\n\nIna son neman sabis.\n\nSabis da ake bukata:\nWuri:\nRana/lokacin da ya dace:\nƘarin bayani:\n",
+    "Sannu Astel,\n\nIna son neman sabis.\n\nSabis da ake bukata:\nWuri:\nRana/lokacin da ya dace:\nƘarin bayani:\n",
   "servicesPage.browseFirst": "Kana son sanin ƙarin bayani game da mu?",
-  "servicesPage.learnMoreLink": "Koyi game da Atlas Steward",
+  "servicesPage.learnMoreLink": "Koyi game da Astel",
   // About
   "about.kicker": "Game da Mu",
   "about.p1":
-    "Ma'anar 'Steward' ita ce ɗaukar alhakin wani abu da kula da shi yadda ya kamata. Wannan shi ne ƙa'idar da Atlas Steward aka gina a kai — ba kawai haɗa ku da wani gwani ba, sai dai turo muku ƙwararren mutum wanda zai amsa alhakin aikin.",
+    "Ma'anar 'Steward' ita ce ɗaukar alhakin wani abu da kula da shi yadda ya kamata. Wannan shi ne ƙa'idar da Astel aka gina a kai — ba kawai haɗa ku da wani gwani ba, sai dai turo muku ƙwararren mutum wanda zai amsa alhakin aikin.",
   "about.p2":
-    "Mu kamfani ne na ƙwararrun ma'aikata da sabis, wanda ke Yola, Jihar Adamawa. Muna ɗaukar ma'aikata, horar da su, kuma ba su takardar shaida ta hanyar Makarantar Atlas Steward, sannan mu tura su gidaje da kasuwanci da ke bukatar aikin wutar lantarki, famfo, hasken rana, kafinta, da tsaftacewa mai inganci.",
+    "Mu kamfani ne na ƙwararrun ma'aikata da sabis, wanda ke Yola, Jihar Adamawa. Muna ɗaukar ma'aikata, horar da su, kuma ba su takardar shaida ta hanyar Makarantar Astel, sannan mu tura su gidaje da kasuwanci da ke bukatar aikin wutar lantarki, famfo, hasken rana, kafinta, da tsaftacewa mai inganci.",
   "about.p3":
     "Muna farkon tafiya ne a yanzu muna mai da hankali kan tabbatar da wannan tsari yana aiki a Yola kafin mu faɗaɗa. Muna fara sabis ne kawai bayan mun gwada shi da abokan ciniki na gaske, kuma muna tura ma'aikata ne kawai waɗanda suka bi tsarin bincikenmu.",
   "about.promiseTitle": "Alkawarinmu",
   "about.promiseBody":
-    "Kowane Atlas Steward an horar da shi, an bincika shi, kuma yana da alhakin aikin da ya yi. Idan wani abu bai yi daidai ba, za mu gyara shi.",
+    "Kowane Astel an horar da shi, an bincika shi, kuma yana da alhakin aikin da ya yi. Idan wani abu bai yi daidai ba, za mu gyara shi.",
   "about.futureTitle": "Inda muke tafiya",
   "about.futureBody":
-    "Ayyukan gida shi ne farkon tafiyarmu, ba iyakarmu ba. Atlas Steward Services shi ne farkon abin da muke shirin girma zuwa babban rukuni — ciki har da Atlas Steward Academy don horarwa da takardar shaida, sannan daga baya ayyukan kula da gine-gine da manyan kwangiloli yayin da muke tabbatar da tsarin, birni bayan birni.",
+    "Ayyukan gida shi ne farkon tafiyarmu, ba iyakarmu ba. Astel Services shi ne farkon abin da muke shirin girma zuwa babban rukuni — ciki har da Astel Academy don horarwa da takardar shaida, sannan daga baya ayyukan kula da gine-gine da manyan kwangiloli yayin da muke tabbatar da tsarin, birni bayan birni.",
 
   // Academy
-  "academy.kicker": "Makarantar Atlas Steward",
+  "academy.kicker": "Makarantar Astel",
   "academy.title": "Muna gina mutanen da za su yi hidima.",
   "academy.subtitle":
-    "Makarantar ita ce hanyar da ƙwararrun ma'aikata ke zama Atlas Stewards horarru, an bincika su, kuma amintattu su wakilce mu a kowane aiki.",
+    "Makarantar ita ce hanyar da ƙwararrun ma'aikata ke zama Astel horarru, an bincika su, kuma amintattu su wakilce mu a kowane aiki.",
   "academy.pipelineTitle": "Yadda tsarin ke aiki",
   "academy.step1Title": "Nema",
   "academy.step1Body": "Ka nema kuma ka gaya mana game da ƙwarewar sana'arka.",
@@ -412,7 +412,7 @@ const ha: Record<keyof typeof en, string> = {
   "academy.step3Title": "Gwaji",
   "academy.step3Body": "Muna gwada ainihin ƙwarewarka ba magana kawai ba.",
   "academy.step4Title": "Takardar Shaida",
-  "academy.step4Body": "Za ka cancanci a tura ka aiki a matsayin Atlas Steward.",
+  "academy.step4Body": "Za ka cancanci a tura ka aiki a matsayin Astel.",
   "academy.step5Title": "Aiki",
   "academy.step5Body": "Za ka fara samun ayyuka na gaske ta hanyar Atlas dispatch.",
   "academy.step6Title": "Ci gaba",
@@ -437,7 +437,7 @@ const ha: Record<keyof typeof en, string> = {
     "Wannan daftari ne na farko, an rubuta shi cikin sauƙin harshe domin kowane mai nema ya karanta ya fahimta kafin ya yarda. Lauya bai bincika shi ba tukuna a ɗauke shi a matsayin bayanin niyya, ba cikakken yarjejeniya ta shari'a ba, sai bayan an bincika shi.",
   "terms.s1Title": "1. Wa wannan ya shafa",
   "terms.s1Body":
-    "Duk wanda ke neman shiga Makarantar Atlas Steward ko yin aiki a matsayin ma'aikacin Atlas Steward, ko da wane irin sana'a yake da shi.",
+    "Duk wanda ke neman shiga Makarantar Astel ko yin aiki a matsayin ma'aikacin Astel, ko da wane irin sana'a yake da shi.",
   "terms.s2Title": "2. Abin da muke so daga gare ka",
   "terms.s2i1": "Karɓi ayyuka ne kawai da aka tura maka ko aka tabbatar ta hanyar Atlas dispatch.",
   "terms.s2i2": "Isa kan lokacin da aka amince, ko ka sanar da dispatch nan take idan za ka makara.",
@@ -465,16 +465,16 @@ const ha: Record<keyof typeof en, string> = {
     "Bayanan abokin ciniki da aka ba ka na kammala aikin da aka tura ka ne kawai. Ka yarda ba za ka nemi ko karɓar aiki kai tsaye daga abokin ciniki da Atlas ta gabatar maka ba, a wajen Atlas, na wani lokaci da za a bayyana a yarjejeniyar ka.",
   "terms.s7Title": "7. Matsayin Kai Mai Zaman Kansa",
   "terms.s7Body":
-    "An ɗauke ka a matsayin mai zaman kansa/abokin tarayya, ba ma'aikacin Atlas Steward ba. Kai ne ke da alhakin haraji da duk wata takardar izinin sana'a da ake bukata.",
+    "An ɗauke ka a matsayin mai zaman kansa/abokin tarayya, ba ma'aikacin Astel ba. Kai ne ke da alhakin haraji da duk wata takardar izinin sana'a da ake bukata.",
   "terms.s8Title": "8. Bayananka",
   "terms.s8Body":
     "Ana amfani da bayanan da hoton pasfo da ka bayar don duba nemanka, kuma idan an amince da kai, don ƙirƙirar bayanan martabarka. Ba ma sayar da bayananka ga wani ɓangare na uku.",
   "terms.hausaNote":
-    "Wannan fassarar Hausa daftari ne na farko. Idan wani abu bai bayyana a fili ba, ko kana da tambaya, don Allah ka tuntuɓi ma'aikatan Atlas Steward kai tsaye kafin ka sanya hannu.",
+    "Wannan fassarar Hausa daftari ne na farko. Idan wani abu bai bayyana a fili ba, ko kana da tambaya, don Allah ka tuntuɓi ma'aikatan Astel kai tsaye kafin ka sanya hannu.",
 
   // Register
   "register.kicker": "Neman Shiga Makaranta",
-  "register.title": "Nemi zama Atlas Steward",
+  "register.title": "Nemi zama Astel",
   "register.subtitle":
     "Cika bayananka a ƙasa. Ana bukatar hoton pasfo mai kyau za a yi amfani da shi don bayanan martabarka idan an amince da nemanka.",
   "register.fullName": "Cikakken suna",
@@ -505,7 +505,7 @@ const ha: Record<keyof typeof en, string> = {
   // Register success
   "registerSuccess.title": "An karɓi nemanka",
   "registerSuccess.body":
-    "Na gode da neman shiga Makarantar Atlas Steward. Mun aika tabbaci zuwa imel ɗinka, kuma ƙungiyarmu za ta duba nemanka da shaidarka cikin 'yan kwanaki.",
+    "Na gode da neman shiga Makarantar Astel. Mun aika tabbaci zuwa imel ɗinka, kuma ƙungiyarmu za ta duba nemanka da shaidarka cikin 'yan kwanaki.",
   "registerSuccess.backHome": "Koma gida",
 
   // Contact
