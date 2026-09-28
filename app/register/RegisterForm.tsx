@@ -4,12 +4,81 @@ import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useMutation } from "convex/react";
 import { api } from "@/convex/_generated/api";
+import type { Id } from "@/convex/_generated/dataModel";
 import Link from "next/link";
 import { siteConfig } from "@/lib/siteConfig";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { TranslationKey } from "@/lib/i18n/translations";
 
-const MAX_PHOTO_BYTES = 5 * 1024 * 1024; // 5MB
+const MAX_PHOTO_BYTES = 5 * 1024 * 1024; // 5MB, checked after compression
+const MAX_DIMENSION = 1280; // px, longest side
+const JPEG_QUALITY = 0.8;
+const UPLOAD_ATTEMPTS = 2;
+
+type DecodedImage = {
+  source: CanvasImageSource;
+  width: number;
+  height: number;
+  cleanup: () => void;
+};
+
+async function decodeImage(file: File): Promise<DecodedImage> {
+  try {
+    const bitmap = await createImageBitmap(file);
+    return {
+      source: bitmap,
+      width: bitmap.width,
+      height: bitmap.height,
+      cleanup: () => bitmap.close(),
+    };
+  } catch {
+    // Fallback for browsers where createImageBitmap can't decode this file.
+    const url = URL.createObjectURL(file);
+    try {
+      const img = await new Promise<HTMLImageElement>((resolve, reject) => {
+        const el = new Image();
+        el.onload = () => resolve(el);
+        el.onerror = () => reject(new Error("Could not decode image"));
+        el.src = url;
+      });
+      return {
+        source: img,
+        width: img.naturalWidth,
+        height: img.naturalHeight,
+        cleanup: () => URL.revokeObjectURL(url),
+      };
+    } catch (err) {
+      URL.revokeObjectURL(url);
+      throw err;
+    }
+  }
+}
+
+// Shrinks a phone photo to a small JPEG held in memory. This avoids failed
+// uploads of multi-megabyte camera photos on weak mobile networks, and
+// avoids Android's stale file-handle problem, since the original File is
+// read immediately instead of at upload time.
+async function compressImage(file: File): Promise<Blob> {
+  const decoded = await decodeImage(file);
+  try {
+    const scale = Math.min(1, MAX_DIMENSION / Math.max(decoded.width, decoded.height));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(decoded.width * scale));
+    canvas.height = Math.max(1, Math.round(decoded.height * scale));
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Canvas not supported");
+    ctx.drawImage(decoded.source, 0, 0, canvas.width, canvas.height);
+
+    const blob = await new Promise<Blob | null>((resolve) =>
+      canvas.toBlob(resolve, "image/jpeg", JPEG_QUALITY)
+    );
+    if (!blob) throw new Error("Could not encode image");
+    return blob;
+  } finally {
+    decoded.cleanup();
+  }
+}
 
 export function RegisterForm() {
   const router = useRouter();
@@ -29,10 +98,6 @@ export function RegisterForm() {
       setError(t("register.errNeedPhoto"));
       return;
     }
-    if (photoFile.size > MAX_PHOTO_BYTES) {
-      setError(t("register.errPhotoTooLarge"));
-      return;
-    }
 
     const formData = new FormData(event.currentTarget);
     const agreedToTerms = formData.get("agreedToTerms") === "on";
@@ -43,17 +108,45 @@ export function RegisterForm() {
 
     setSubmitting(true);
     try {
-      const uploadUrl = await generateUploadUrl();
-      const uploadResponse = await fetch(uploadUrl, {
-        method: "POST",
-        headers: { "Content-Type": photoFile.type },
-        body: photoFile,
-      });
-      if (!uploadResponse.ok) {
+      // 1. Shrink the photo on the phone before uploading anything.
+      let photoBlob: Blob;
+      try {
+        photoBlob = await compressImage(photoFile);
+      } catch (err) {
+        console.error("Photo compression failed, using original file:", err);
+        photoBlob = photoFile; // e.g. a format this browser can't decode
+      }
+      if (photoBlob.size > MAX_PHOTO_BYTES) {
+        setError(t("register.errPhotoTooLarge"));
+        setSubmitting(false);
+        return;
+      }
+
+      // 2. Upload straight to Convex storage. Retry once with a fresh upload
+      //    URL, because mobile connections drop requests more often.
+      let storageId: Id<"_storage"> | null = null;
+      for (let attempt = 1; attempt <= UPLOAD_ATTEMPTS && !storageId; attempt++) {
+        try {
+          const uploadUrl = await generateUploadUrl();
+          const uploadResponse = await fetch(uploadUrl, {
+            method: "POST",
+            headers: { "Content-Type": photoBlob.type || "image/jpeg" },
+            body: photoBlob,
+          });
+          if (!uploadResponse.ok) {
+            throw new Error(`Upload responded with status ${uploadResponse.status}`);
+          }
+          const json = await uploadResponse.json();
+          storageId = json.storageId as Id<"_storage">;
+        } catch (err) {
+          console.error(`Photo upload attempt ${attempt} failed:`, err);
+        }
+      }
+      if (!storageId) {
         throw new Error(t("register.errUploadFailed"));
       }
-      const { storageId } = await uploadResponse.json();
 
+      // 3. Submit the rest of the application, referencing the uploaded photo.
       await register({
         fullName: String(formData.get("fullName") ?? ""),
         email: String(formData.get("email") ?? ""),
@@ -109,7 +202,13 @@ export function RegisterForm() {
         </div>
         <div>
           <label className="field-label" htmlFor="area">{t("register.area")}</label>
-          <input className="field-input" id="area" name="area" placeholder={t("register.areaPlaceholder")} required />
+          <input
+            className="field-input"
+            id="area"
+            name="area"
+            placeholder={t("register.areaPlaceholder")}
+            required
+          />
         </div>
       </div>
 
@@ -120,8 +219,16 @@ export function RegisterForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label className="field-label" htmlFor="serviceCategory">{t("register.serviceCategory")}</label>
-          <select className="field-input" id="serviceCategory" name="serviceCategory" required defaultValue="">
+          <label className="field-label" htmlFor="serviceCategory">
+            {t("register.serviceCategory")}
+          </label>
+          <select
+            className="field-input"
+            id="serviceCategory"
+            name="serviceCategory"
+            required
+            defaultValue=""
+          >
             <option value="" disabled>{t("register.selectOne")}</option>
             {siteConfig.services.map((s) => (
               <option key={s.key} value={s.key}>
@@ -131,14 +238,31 @@ export function RegisterForm() {
           </select>
         </div>
         <div>
-          <label className="field-label" htmlFor="yearsExperience">{t("register.yearsExperience")}</label>
-          <input className="field-input" id="yearsExperience" name="yearsExperience" type="number" min={0} step={1} required />
+          <label className="field-label" htmlFor="yearsExperience">
+            {t("register.yearsExperience")}
+          </label>
+          <input
+            className="field-input"
+            id="yearsExperience"
+            name="yearsExperience"
+            type="number"
+            min={0}
+            step={1}
+            required
+          />
         </div>
       </div>
 
       <div>
-        <label className="field-label" htmlFor="priorWorkDescription">{t("register.workDescription")}</label>
-        <textarea className="field-input min-h-[100px]" id="priorWorkDescription" name="priorWorkDescription" required />
+        <label className="field-label" htmlFor="priorWorkDescription">
+          {t("register.workDescription")}
+        </label>
+        <textarea
+          className="field-input min-h-[100px]"
+          id="priorWorkDescription"
+          name="priorWorkDescription"
+          required
+        />
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
@@ -148,7 +272,13 @@ export function RegisterForm() {
         </div>
         <div>
           <label className="field-label" htmlFor="referencePhone">{t("register.referencePhone")}</label>
-          <input className="field-input" id="referencePhone" name="referencePhone" type="tel" required />
+          <input
+            className="field-input"
+            id="referencePhone"
+            name="referencePhone"
+            type="tel"
+            required
+          />
         </div>
       </div>
 
