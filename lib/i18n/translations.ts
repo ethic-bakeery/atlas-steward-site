@@ -97,7 +97,7 @@ const en = {
   "home.heroTitle": "Built to Serve. Trained to Care.",
   "home.heroSubtitle":
     "Astel trains, employs, and deploys professional technicians to take care of the electrical, plumbing, and solar problems in your home or business with someone accountable behind every job.",
-  "home.ctaApply": "Apply to the Academy",
+  "home.ctaApply": "Become a Partner",
   "home.ctaLearn": "Learn how it works",
   "home.servicesTitle": "What we cover",
   "home.servicesSubtitle":
