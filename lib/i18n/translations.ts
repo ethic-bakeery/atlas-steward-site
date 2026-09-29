@@ -213,7 +213,7 @@ const en = {
 
   // Register
   "register.kicker": "Academy Application",
-  "register.title": "Apply to become an Astel",
+  "register.title": "Apply to become a steward",
   "register.subtitle":
     "Fill in your details below. A clear passport photo is required this will be used for your technician profile if your application is approved.",
   "register.fullName": "Full name",
