@@ -24,7 +24,7 @@ export default function HomePage() {
               {t("home.ctaApply")}
             </Link>
             <Link
-              href="/about"
+              href="https://book.astel.ng/"
               className="btn-secondary border-white/30 bg-transparent text-white hover:border-white/50 hover:bg-white/10"
             >
               {t("home.ctaLearn")}
