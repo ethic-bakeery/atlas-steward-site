@@ -98,7 +98,7 @@ const en = {
   "home.heroSubtitle":
     "Astel trains, employs, and deploys professional technicians to take care of the electrical, plumbing, and solar problems in your home or business with someone accountable behind every job.",
   "home.ctaApply": "Become a Partner",
-  "home.ctaLearn": "Learn how it works",
+  "home.ctaLearn": "Book a Service",
   "home.servicesTitle": "What we cover",
   "home.servicesSubtitle":
     "We only launch a service once it has been tested and validated this list reflects what we're currently building in Yola.",
